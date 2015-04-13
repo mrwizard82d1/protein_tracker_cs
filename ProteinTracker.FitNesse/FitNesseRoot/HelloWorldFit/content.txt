@@ -24,7 +24,7 @@ In addition, I define the path to my .NET assembly that contains my fixtures.
 And now for something completely tabular. The table header must contain the fully qualified 
 name of a class containing the test fixture (similar to the Java fixture in protein_tracker_java).
 
-!|ProteinTrackerFitSharp.HelloWorld     |
+!|ProteinTrackerDotNetFit.HelloWorld     |
 |FirstName|LastName|FullName?           |
 |Lawrence Allan |Jones   |Lawrence Allan Jones|
 
