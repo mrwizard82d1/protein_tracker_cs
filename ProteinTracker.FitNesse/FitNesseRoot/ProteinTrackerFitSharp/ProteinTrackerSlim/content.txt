@@ -1,0 +1,18 @@
+Define the Slim test system
+!define TEST_SYSTEM {slim}
+
+Define the Slim assembly and test runner.
+!define COMMAND_PATTERN {%m -r fitSharp.Slim.Service.Runner,FitSharp/fitSharp.dll %p}
+!define TEST_RUNNER {FitSharp/Runner.exe}
+
+Define the path of the test fixture
+!path c:\cygwin64\home\ljones\professional\projects\protein_tracker_cs\ProteinTracker\ProteinTrackerDotNetSlim\bin\Debug\ProteinTrackerDotNetSlim.dll
+
+Define the test.
+!| Can I add and subtract proteins?|
+|Amount   |Operation   |Total Is?  |
+|5        |add         |5          |
+|10       |add         |15         |
+|3        |subtract    |12         |
+|20       |subtract    |0          |
+|1        |add         |1          |
