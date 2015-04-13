@@ -6,15 +6,16 @@ I define both the command pattern and the test runner.
 The arguments"%m" and "%p" are supplied by FitNesse at run-time. The "%m" argument contains
 the actual runner, and the "%p" argument contains host name, port and other information.
 
-This same web page, http://fitnesse.996250.n3.nabble.com/fitsharp-problem-with-fitnesse-td10409.html, 
-has code using the full path of the runner and the assembly. I'll try that route.
-
-!define COMMAND_PATTERN {%m -f fitnesse.fitserver.FitServer,c:\cygwin64\home\ljones\professional\software\lib\dotnet\fitsharp\fitsharp-2.2-4.0\fit.dll %p}
+!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,c:\cygwin64\home\ljones\professional\software\lib\dotnet\fitsharp\fitsharp-2.2-4.0\fit.dll %p}
 !define TEST_RUNNER {c:\cygwin64\home\ljones\professional\software\lib\dotnet\fitsharp\fitsharp-2.2-4.0\Runner.exe}
 
 Remember that the values of variables must occur within curly braces "{}." (If you forget 
 to put the value inside the braces, when FitNesse displays the page, it will just display
 the line itself.
+
+Nope. Still says missing runner class.
+
+If only I had learned to type as a child, perhaps I would be farther along in my career.
 
 ----
 
