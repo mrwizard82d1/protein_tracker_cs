@@ -30,6 +30,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="dbfit">
+      <HintPath>..\packages\FitSharp.2.2\lib\net40\dbfit.dll</HintPath>
+    </Reference>
+    <Reference Include="dbfit.mysql">
+      <HintPath>..\packages\FitSharp.2.2\lib\net40\dbfit.mysql.dll</HintPath>
+    </Reference>
+    <Reference Include="dbfit.oracle">
+      <HintPath>..\packages\FitSharp.2.2\lib\net40\dbfit.oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="dbfit.sqlserver">
+      <HintPath>..\packages\FitSharp.2.2\lib\net40\dbfit.sqlserver.dll</HintPath>
+    </Reference>
+    <Reference Include="dbfit.sybase">
+      <HintPath>..\packages\FitSharp.2.2\lib\net40\dbfit.sybase.dll</HintPath>
+    </Reference>
+    <Reference Include="fit">
+      <HintPath>..\packages\FitSharp.2.2\lib\net40\fit.dll</HintPath>
+    </Reference>
+    <Reference Include="fitSharp">
+      <HintPath>..\packages\FitSharp.2.2\lib\net40\fitSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +62,9 @@
   <ItemGroup>
     <Compile Include="HelloWorld.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

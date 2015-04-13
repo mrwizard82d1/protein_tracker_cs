@@ -1,6 +1,8 @@
-﻿namespace ProteinTrackerDotNetFit
+﻿using fit;
+
+namespace ProteinTrackerDotNetFit
 {
-    public class HelloWorld
+    public class HelloWorld : ColumnFixture
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
