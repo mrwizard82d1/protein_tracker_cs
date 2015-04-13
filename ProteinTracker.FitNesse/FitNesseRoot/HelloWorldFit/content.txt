@@ -6,8 +6,8 @@ I define both the command pattern and the test runner.
 The arguments"%m" and "%p" are supplied by FitNesse at run-time. The "%m" argument contains
 the actual runner, and the "%p" argument contains host name, port and other information.
 
-!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,..\ProteinTracker\lib\fit.dll %p}
-!define TEST_RUNNER {..\ProteinTracker\lib\Runner.exe}
+!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,FitSharp\fit.dll %p}
+!define TEST_RUNNER {FitSharp\Runner.exe}
 
 Remember that the values of variables must occur within curly braces "{}." (If you forget 
 to put the value inside the braces, when FitNesse displays the page, it will just display
@@ -24,8 +24,8 @@ In addition, I define the path to my .NET assembly that contains my fixtures.
 And now for something completely tabular. The table header must contain the fully qualified 
 name of a class containing the test fixture (similar to the Java fixture in protein_tracker_java).
 
-!|ProteinTrackerDotNetFit.HelloWorld     |
-|FirstName|LastName|FullName?           |
-|Lawrence Allan |Jones   |Lawrence Allan Jones|
+!|ProteinTrackerDotNetFit.HelloWorld         |
+|FirstName     |LastName|FullName?           |
+|Lawrence Allan|Jones   |Lawrence Allan Jones|
 
 !contents -R2 -g -p -f -h

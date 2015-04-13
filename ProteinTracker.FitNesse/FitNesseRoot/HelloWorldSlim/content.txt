@@ -1,0 +1,19 @@
+I define the !style_code[TEST_SYSTEM] to be Slim.
+!define TEST_SYSTEM {slim}
+
+I tell FitNesse where to find the test runner.
+!define TEST_RUNNER {FitSharp\Runner.exe}
+
+...the command pattern to invoke (note the use of ''fitSharp'' instead 
+of ''fit''.)
+!define COMMAND_PATTERN {%m -r fitSharp.Slim.Service.Runner,FitSharp\fitSharp.dll %p}
+
+...a path
+!path c:\cygwin64\home\ljones\professional\projects\protein_tracker_cs\ProteinTracker\ProteinTrackerDotNetSlim\bin\Debug\ProteinTrackerDotNetSlim.dll
+
+...and finally a test.
+!|ProteinTrackerDotNetSlim.HelloSlim        |
+|First Name    |Last Name|Full Name?          |
+|Lawrence Allan|Jones    |Lawrence Allan Jones|
+
+!contents -R2 -g -p -f -h
