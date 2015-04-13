@@ -6,8 +6,8 @@ I define both the command pattern and the test runner.
 The arguments"%m" and "%p" are supplied by FitNesse at run-time. The "%m" argument contains
 the actual runner, and the "%p" argument contains host name, port and other information.
 
-!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,c:\cygwin64\home\ljones\professional\software\lib\dotnet\fitsharp\fitsharp-2.2-4.0\fit.dll %p}
-!define TEST_RUNNER {c:\cygwin64\home\ljones\professional\software\lib\dotnet\fitsharp\fitsharp-2.2-4.0\Runner.exe}
+!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,..\ProteinTracker\lib\fit.dll %p}
+!define TEST_RUNNER {..\ProteinTracker\lib\Runner.exe}
 
 Remember that the values of variables must occur within curly braces "{}." (If you forget 
 to put the value inside the braces, when FitNesse displays the page, it will just display
