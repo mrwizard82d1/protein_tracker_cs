@@ -17,7 +17,7 @@ the line itself.
 
 In addition, I define the path to my .NET assembly that contains my fixtures.
 
-!path ..\ProteinTracker\HelloWorld\bin\Debug\HelloWorld.dll
+!path ..\ProteinTracker\ProteinTrackerDotNetFit\bin\Debug\ProteinTrackerDotNetFit.dll
 
 ----
 
