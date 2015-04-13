@@ -1,0 +1,47 @@
+This page a simple test of the integration of FitNesse and fitsharp.
+
+----
+
+I define both the command pattern and the test runner.
+The arguments"%m" and "%p" are supplied by FitNesse at run-time. The "%m" argument contains
+the actual runner, and the "%p" argument contains hostname and port information.
+
+'''Oops!''' Putting a leading \ at the beginning of the test runner path tells FitNesse
+to look for the !style_code[ProteinTracker] directory in the root of the current drive.
+'''No such luck'''. This erroneous path causes FitNesse to report an 
+!style_code[InternalException] when I actually run the test. The message indicates that I 
+cannot run the program.
+
+I though I had fixed this error by removing the leading \; however, afterward, I still see
+the same error. When I look at the directory in which I ran the FitNesse java process, I
+see that the current working directory of that process is 
+!style_code[protein_tracker_cs\ProteinTracker.FitNesse]. This is a '''sibling''' of the 
+!style_code[ProteinTracker] directory containing !style_code[lib\Runner.exe]. Time to 
+correct this issue.
+
+Well, its better. FitNesse actually runs the test but it now fails to find the runner 
+assembly. '''I know the answer'''. I must change the path of the fitsharp assembly to be 
+found in the same relative location as the test runner. '''Doh'''.
+
+!define COMMAND_PATTERN {%m -f fitnesse.fitserver.FitServer,..\ProteinTracker\lib\fit.dll %p}
+!define TEST_RUNNER {..\ProteinTracker\lib\Runner.exe}
+
+Remember that the values of variables must occur within curly braces "{}." (If you forget 
+to put the value inside the braces, when FitNesse displays the page, it will just display
+the line itself.
+
+----
+
+In addition, I define the path to my .NET assembly that contains my fixtures - 
+but I'll do that later. :)
+
+----
+
+And now for something completely tabular. The table header must contain the fully qualified 
+name of a class containing the test fixture (similar to the Java fixture in protein_tracker_java).
+
+!|ProteinTrackerFitSharp.HelloWorld     |
+|FirstName|LastName|FullName?           |
+|Lawrence |Jones   |Lawrence Allan Jones|
+
+!contents -R2 -g -p -f -h
