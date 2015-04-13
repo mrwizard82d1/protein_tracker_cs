@@ -13,14 +13,11 @@ Remember that the values of variables must occur within curly braces "{}." (If y
 to put the value inside the braces, when FitNesse displays the page, it will just display
 the line itself.
 
-Nope. Still says missing runner class.
-
-If only I had learned to type as a child, perhaps I would be farther along in my career.
-
 ----
 
-In addition, I define the path to my .NET assembly that contains my fixtures - 
-but I'll do that later. :)
+In addition, I define the path to my .NET assembly that contains my fixtures.
+
+!path ..\ProteinTracker\HelloWorld\bin\Debug\HelloWorld.dll
 
 ----
 
@@ -29,6 +26,6 @@ name of a class containing the test fixture (similar to the Java fixture in prot
 
 !|ProteinTrackerFitSharp.HelloWorld     |
 |FirstName|LastName|FullName?           |
-|Lawrence |Jones   |Lawrence Allan Jones|
+|Lawrence Allan |Jones   |Lawrence Allan Jones|
 
 !contents -R2 -g -p -f -h
