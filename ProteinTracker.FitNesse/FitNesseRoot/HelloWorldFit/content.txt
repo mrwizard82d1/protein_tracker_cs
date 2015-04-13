@@ -6,17 +6,11 @@ I define both the command pattern and the test runner.
 The arguments"%m" and "%p" are supplied by FitNesse at run-time. The "%m" argument contains
 the actual runner, and the "%p" argument contains host name, port and other information.
 
-To get FitNesse to recognize the fitsharp libraries, I moved them underneath 
-ProteinTracker.FitNesse (just like in the video). (If this move works, I need to better
-understand why. Could it be relative to the actually !types_code[Runner.exe]?)
+This same web page, http://fitnesse.996250.n3.nabble.com/fitsharp-problem-with-fitnesse-td10409.html, 
+has code using the full path of the runner and the assembly. I'll try that route.
 
-Argh... I must fix all references after the move.
-
-Hmmm. I wonder if I need the path of the assembly containing my test fixture - even though
-I've not yet written it.
-
-!define COMMAND_PATTERN {%m -f fitnesse.fitserver.FitServer,lib\fit.dll %p}
-!define TEST_RUNNER {lib\Runner.exe}
+!define COMMAND_PATTERN {%m -f fitnesse.fitserver.FitServer,c:\cygwin64\home\ljones\professional\software\lib\dotnet\fitsharp\fitsharp-2.2-4.0\fit.dll %p}
+!define TEST_RUNNER {c:\cygwin64\home\ljones\professional\software\lib\dotnet\fitsharp\fitsharp-2.2-4.0\Runner.exe}
 
 Remember that the values of variables must occur within curly braces "{}." (If you forget 
 to put the value inside the braces, when FitNesse displays the page, it will just display
@@ -26,8 +20,6 @@ the line itself.
 
 In addition, I define the path to my .NET assembly that contains my fixtures - 
 but I'll do that later. :)
-
-!path foobar.dll
 
 ----
 
