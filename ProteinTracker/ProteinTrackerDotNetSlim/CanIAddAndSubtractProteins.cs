@@ -2,7 +2,7 @@
 
 namespace ProteinTrackerDotNetSlim
 {
-    class CanIAddAndSubtractProteins
+    public class CanIAddAndSubtractProteins
     {
         private TrackerService _sut = new TrackerService();
 

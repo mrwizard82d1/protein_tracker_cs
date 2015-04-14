@@ -8,6 +8,10 @@ Define the Slim assembly and test runner.
 Define the path of the test fixture
 !path c:\cygwin64\home\ljones\professional\projects\protein_tracker_cs\ProteinTracker\ProteinTrackerDotNetSlim\bin\Debug\ProteinTrackerDotNetSlim.dll
 
+Oops. Don't forget the import!
+!| import |
+| ProteinTrackerDotNetSlim |
+
 Define the test.
 !| Can I add and subtract proteins?|
 |Amount   |Operation   |Total Is?  |
